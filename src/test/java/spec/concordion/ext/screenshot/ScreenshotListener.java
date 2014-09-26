@@ -18,7 +18,6 @@ import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 
-import test.concordion.EmbedExtensionWithConcordionNamespaceFactory;
 import test.concordion.FileOutputStreamer;
 import test.concordion.TestRig;
 import test.concordion.ext.screenshot.DummyScreenshotFactory;
@@ -36,7 +35,7 @@ public class ScreenshotListener {
     @Before 
     public void installExtension() {
         System.setProperty("concordion.extensions", 
-                DummyScreenshotFactory.class.getName() + ", " + EmbedExtensionWithConcordionNamespaceFactory.class.getName());
+                DummyScreenshotFactory.class.getName());
     }
     
     public String renderAsFailure(String fragment, String acronym) throws Exception {

@@ -1,71 +1,31 @@
-buildscript {
-    repositories {
-        jcenter()
-    }
+apply from: '../concordion-extension-build/extension-build.gradle'
 
-    dependencies {
-        classpath 'org.gradle.api.plugins:gradle-nexus-plugin:0.7.1'
-    }
-}
+description = 'An extension to Concordion to embed screenshots in the output specification'
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'nexus'
-apply from: 'http://tellurianring.com/projects/gradle-plugins/gradle-release/apply.groovy'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile 'org.concordion:concordion:1.4.4'
-}
-
-compileJava {
-    sourceCompatibility = 1.6
-    targetCompatibility = 1.6
-}
-
-test {
-    systemProperties['concordion.output.dir'] = "$reporting.baseDir/spec"
-}
-
-createReleaseTag.dependsOn uploadArchives
-
-modifyPom {
-    project {
-        name 'concordion-extensions'
-        description 'This extensions library adds features to the Concordion acceptance test framework, such as embedding screenshots or logging information in the output'
-        url 'http://www.concordion.org/ExtensionsLibrary.html'
-        packaging 'jar'
-        inceptionYear '2010'
-
-        scm {
-            url 'https://github.com/concordion/concordion-extensions.git'
-            connection 'scm:git:git://github.com/concordion/concordion-extensions.git'
-            developerConnection 'scm:git:git@github.com:concordion/concordion-extensions.git'
-        }
-
-        licenses {
-            license {
-                name 'The Apache Software License, Version 2.0'
-                url 'http://www.apache.org/licenses/LICENSE-2.0.html'
-                distribution 'repo'
-            }
-        }
-
-        issueManagement{ 
-            system 'GoogleCode'
-            url 'http://code.google.com/p/concordion-extensions/issues'
-        }
-
-        developers {
-            developer {
-                id 'nigel.charman.nz'
-                name 'Nigel Charman'
-                roles { role 'Project owner' }
-                url 'http://gplus.to/NigelCharman'
-            }
+ext {
+    developers = {
+        developer {
+            id 'nigel.charman.nz'
+            name 'Nigel Charman'
+            roles { role 'Project owner' }
+            url 'http://gplus.to/NigelCharman'
         }
     }
+    inceptionYear = '2011'   
 }
+
+githubPages {
+	repoUri = 'git@github.com:nigelcharman/concordion-screenshot-extension.git'
+	pages {
+    	from 'docs'
+    	
+    	from ('build/reports/spec/spec/concordion/ext/screenshot/') {
+    		into 'spec'
+    	}
+    	
+    	from ('build/docs/javadoc/') {
+    		into 'api'
+    	}
+	}
+}
+
