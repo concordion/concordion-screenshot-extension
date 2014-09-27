@@ -15,7 +15,7 @@ ext {
 }
 
 githubPages {
-    repoUri = 'git@github.com:nigelcharman/concordion-screenshot-extension.git'
+    repoUri = 'git@github.com:concordion/concordion-screenshot-extension.git'
     pages {
         from 'docs'
         

@@ -1,6 +1,6 @@
 This [Concordion](http://www.concordion.org) extension provides the capability to embed screenshots in the output specification.
 
-The [demo project](http://github.com/nigelcharman//concordion-screenshot-extension-demo) demonstrates this extension using Concordion with Selenium WebDriver for end-to-end browser testing.
+The [demo project](http://github.com/concordion//concordion-screenshot-extension-demo) demonstrates this extension using Concordion with Selenium WebDriver for end-to-end browser testing.
 
 # Introduction
 
@@ -100,13 +100,13 @@ the maximum width of the screenshot images on mouse hover to 400 pixels.
 By default, the screenshot will be of the full visible screen.
 This can be overridden using a custom `ScreenshotTaker`.
 
-For example, the `SeleniumScreenshotTaker` in the above examples ensures that only the browser window is captured, that the full browser page is captured and that it is captured regardless of whether the browser window is currently displayed. (The `SeleniumScreenshotTaker` is included in the [concordion-screenshot-extension-demo](http://github.com/nigelcharman/concordion-screenshot-extension-demo) project.)
+For example, the `SeleniumScreenshotTaker` in the above examples ensures that only the browser window is captured, that the full browser page is captured and that it is captured regardless of whether the browser window is currently displayed. (The `SeleniumScreenshotTaker` is included in the [concordion-screenshot-extension-demo](http://github.com/concordion/concordion-screenshot-extension-demo) project.)
 
 # Further info
 
-* [Specification](http://nigelcharman.github.io/concordion-screenshot-extension/spec/Screenshot.html)
-* [API](http://nigelcharman.github.io/concordion-screenshot-extension/api/index.html)
-* [Demo project](http://github.com/nigelcharman/concordion-screenshot-extension-demo)
+* [Specification](http://concordion.github.io/concordion-screenshot-extension/spec/Screenshot.html)
+* [API](http://concordion.github.io/concordion-screenshot-extension/api/index.html)
+* [Demo project](http://github.com/concordion/concordion-screenshot-extension-demo)
 
 ### Acknowledgements
 
