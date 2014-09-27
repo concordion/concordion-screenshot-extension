@@ -1,4 +1,4 @@
-apply from: '../concordion-extension-build/extension-build.gradle'
+apply from: 'https://raw.githubusercontent.com/concordion/concordion-extension-build/master/extension-build.gradle'
 
 description = 'An extension to Concordion to embed screenshots in the output specification'
 
@@ -15,17 +15,16 @@ ext {
 }
 
 githubPages {
-	repoUri = 'git@github.com:nigelcharman/concordion-screenshot-extension.git'
-	pages {
-    	from 'docs'
-    	
-    	from ('build/reports/spec/spec/concordion/ext/screenshot/') {
-    		into 'spec'
-    	}
-    	
-    	from ('build/docs/javadoc/') {
-    		into 'api'
-    	}
-	}
+    repoUri = 'git@github.com:nigelcharman/concordion-screenshot-extension.git'
+    pages {
+        from 'docs'
+        
+        from ('build/reports/spec/spec/concordion/ext/screenshot/') {
+            into 'spec'
+        }
+        
+        from ('build/docs/javadoc/') {
+            into 'api'
+        }
+    }
 }
-
