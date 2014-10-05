@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/concordion/concordion-screenshot-extension.svg?branch=master)](https://travis-ci.org/concordion/concordion-screenshot-extension)
+
 This [Concordion](http://www.concordion.org) extension provides the capability to embed screenshots in the output specification.
 
 The [demo project](http://github.com/concordion//concordion-screenshot-extension-demo) demonstrates this extension using Concordion with Selenium WebDriver for end-to-end browser testing.
