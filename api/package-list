@@ -1,2 +1,4 @@
 org.concordion.ext
-org.concordion.ext.screenshot
+org.concordion.ext.jul.formatter
+org.concordion.ext.logging
+org.concordion.ext.tooltip
