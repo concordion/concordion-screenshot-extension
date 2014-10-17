@@ -62,6 +62,9 @@ to use a custom configuration that sets `setScreenshotOnAssertionFailure`
 and `setScreenshotOnThrowable` to `false`. See below for
 custom configuration details.
 
+# Installation
+The extension is available from [Maven Central](http://search.maven.org/#artifactdetails%7Corg.concordion%7Cconcordion-screenshot-extension%7C1.1.2%7Cjar).</a>
+
 # Configuration
 
 ## Default Configuration
