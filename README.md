@@ -112,4 +112,4 @@ For example, the `SeleniumScreenshotTaker` in the above examples ensures that on
 
 ### Acknowledgements
 
-This extension was partly inspired by Mark Derricutt's [ScreenshotCommand](http://github.com/talios/concordion-examples/blob/master/src/test/java/com/talios/ScreenshotCommand.java), and by Adam Setch's [post](http://tech.groups.yahoo.com/group/concordion/message/618) to the Concordion list.
+This extension was partly inspired by Mark Derricutt's [ScreenshotCommand](http://github.com/talios/concordion-examples/blob/master/src/test/java/com/talios/ScreenshotCommand.java), and by Adam Setch's [post](https://groups.yahoo.com/neo/groups/concordion/conversations/topics/618) to the Concordion list.
