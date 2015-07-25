@@ -14,6 +14,10 @@ ext {
     inceptionYear = '2011'   
 }
 
+test {
+    exclude '**/*AppleTest.*'
+}
+
 githubPages {
 	repoUri = 'git@github.com:concordion/concordion-screenshot-extension.git'
 	pages {
