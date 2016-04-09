@@ -35,11 +35,11 @@ public class RobotScreenshotTaker implements ScreenshotTaker {
     private static final String FILE_TYPE = "jpg";
 
     @Override
-    public int writeScreenshotTo(OutputStream outputStream) throws IOException {
+    public Dimension writeScreenshotTo(OutputStream outputStream) throws IOException {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         BufferedImage image = getImage(screenSize);
         ImageIO.write(image, FILE_TYPE, outputStream);
-        return (int) screenSize.getWidth();
+        return screenSize;
     }
 
     public BufferedImage getImage(Dimension size) {

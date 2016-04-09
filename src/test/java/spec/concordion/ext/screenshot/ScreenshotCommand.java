@@ -19,7 +19,7 @@ import org.junit.Before;
 import org.junit.runner.RunWith;
 
 import test.concordion.FileOutputStreamer;
-import test.concordion.TestRig;
+import test.concordion.temp.TestRig;
 import test.concordion.ext.screenshot.DummyScreenshotFactory;
 
 @RunWith(ConcordionRunner.class)

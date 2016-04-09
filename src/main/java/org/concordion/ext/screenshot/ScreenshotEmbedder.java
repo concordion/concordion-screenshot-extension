@@ -96,7 +96,7 @@ public class ScreenshotEmbedder extends AbstractCommand implements AssertEqualsL
         int imageWidth;
         try {
             OutputStream outputStream = target.getOutputStream(imageResource);
-            imageWidth = screenshotTaker.writeScreenshotTo(outputStream);
+            imageWidth = screenshotTaker.writeScreenshotTo(outputStream).width;
             new ImageRenderer(hidden, maxWidth).addImageToElement(element, imageName, imageWidth);
         } catch (IOException e) {
             throw new RuntimeException(e);

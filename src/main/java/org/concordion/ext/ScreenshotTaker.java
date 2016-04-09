@@ -14,6 +14,7 @@
  */
 package org.concordion.ext;
 
+import java.awt.Dimension;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -29,7 +30,7 @@ public interface ScreenshotTaker {
      *  @throws IOException if an I/O error occurs writing the screenshot to the stream
      *  @throws ScreenshotUnavailableException if unable to take a screenshot 
      */
-    int writeScreenshotTo(OutputStream outputStream) throws IOException;
+    Dimension writeScreenshotTo(OutputStream outputStream) throws IOException;
 
     /**
      * Returns the filename extension that should be used for images taken by this object.

@@ -18,8 +18,8 @@ import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 
 import test.concordion.FileOutputStreamer;
-import test.concordion.ProcessingResult;
-import test.concordion.TestRig;
+import test.concordion.temp.ProcessingResult;
+import test.concordion.temp.TestRig;
 
 @RunWith(ConcordionRunner.class)
 public class ScreenshotJavaScript {
