@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2010 Two Ten Consulting Limited, New Zealand 
- * 
+ * Copyright (c) 2010 Two Ten Consulting Limited, New Zealand
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -18,16 +18,16 @@ import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 
 import test.concordion.FileOutputStreamer;
-import test.concordion.temp.ProcessingResult;
-import test.concordion.temp.TestRig;
+import test.concordion.ProcessingResult;
+import test.concordion.TestRig;
 
 @RunWith(ConcordionRunner.class)
 public class ScreenshotJavaScript {
-    
+
     public void setSystemProperty(String name, String value) {
         System.setProperty(name, value);
     }
-    
+
     public boolean hasJavaScriptFunction(String functionName) throws Exception {
         ProcessingResult result = new TestRig()
             .withFixture(this)

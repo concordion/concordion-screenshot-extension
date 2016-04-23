@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2010 Two Ten Consulting Limited, New Zealand 
- * 
+ * Copyright (c) 2010 Two Ten Consulting Limited, New Zealand
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -19,21 +19,21 @@ import org.junit.Before;
 import org.junit.runner.RunWith;
 
 import test.concordion.FileOutputStreamer;
-import test.concordion.temp.TestRig;
+import test.concordion.TestRig;
 import test.concordion.ext.screenshot.DummyScreenshotFactory;
 
 @RunWith(ConcordionRunner.class)
 public class ScreenshotCommand {
-    
+
     public static final String SPEC_NAME = "/" + ScreenshotCommand.class.getName().replace(".java", ".html").replaceAll("\\.","/");
-    public static int testRunNumber = 1;  // since we want to run the test rig multiple times for a single spec 
-    
-    @Before 
+    public static int testRunNumber = 1;  // since we want to run the test rig multiple times for a single spec
+
+    @Before
     public void installExtension() {
-        System.setProperty("concordion.extensions", 
+        System.setProperty("concordion.extensions",
                 DummyScreenshotFactory.class.getName());
     }
-    
+
     public String render(String fragment, String namespacePrefix, String namespace) throws Exception {
         return new TestRig()
             .withNamespaceDeclaration(namespacePrefix, namespace)
