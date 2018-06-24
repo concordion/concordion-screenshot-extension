@@ -18,9 +18,10 @@ test {
     exclude '**/*AppleTest.*'
 }
 
-githubPages {
+gitPublish {
 	repoUri = 'git@github.com:concordion/concordion-screenshot-extension.git'
-	pages {
+	branch = 'gh-pages'
+	contents {
     	from 'docs'
     	
     	from ('build/reports/spec/spec/concordion/ext/screenshot/') {
