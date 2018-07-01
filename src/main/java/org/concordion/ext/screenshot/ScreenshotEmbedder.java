@@ -18,13 +18,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 
-import org.concordion.api.AbstractCommand;
-import org.concordion.api.CommandCall;
-import org.concordion.api.Element;
-import org.concordion.api.Evaluator;
-import org.concordion.api.Resource;
-import org.concordion.api.ResultRecorder;
-import org.concordion.api.Target;
+import org.concordion.api.*;
 import org.concordion.api.listener.AssertEqualsListener;
 import org.concordion.api.listener.AssertFailureEvent;
 import org.concordion.api.listener.AssertFalseListener;
@@ -75,12 +69,12 @@ public class ScreenshotEmbedder extends AbstractCommand implements AssertEqualsL
     }
 
     @Override
-    public void execute(CommandCall commandCall, Evaluator evaluator, ResultRecorder resultRecorder) {
+    public void execute(CommandCall commandCall, Evaluator evaluator, ResultRecorder resultRecorder, Fixture fixture) {
         Check.isFalse(commandCall.hasChildCommands(), "Nesting commands inside an 'screenshot' is not supported");
         Element element = commandCall.getElement();
 
         String props = element.getAttributeValue(ScreenshotExtension.COMMAND_NAME, ScreenshotExtension.EXTENSION_NAMESPACE);
-        
+
         boolean linked = false;
         if ("linked".equals(props)){
             linked = true;
@@ -88,7 +82,7 @@ public class ScreenshotEmbedder extends AbstractCommand implements AssertEqualsL
 
         addScreenshotTo(element, linked);
     }
-    
+
     private void addScreenshotTo(Element element, boolean hidden) {
         String imageName = getNextImageName(resource.getName());
         Resource imageResource = resource.getRelativeResource(imageName);
