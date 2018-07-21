@@ -65,7 +65,7 @@ and `setScreenshotOnThrowable` to `false`. See below for
 custom configuration details.
 
 # Installation
-The extension is available from [Maven Central](http://search.maven.org/#artifactdetails%7Corg.concordion%7Cconcordion-screenshot-extension%7C1.1.2%7Cjar).</a>
+The extension is available from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.concordion%22%20AND%20a%3A%22concordion-screenshot-extension%22).</a>
 
 # Configuration
 
