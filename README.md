@@ -64,6 +64,21 @@ to use a custom configuration that sets `setScreenshotOnAssertionFailure`
 and `setScreenshotOnThrowable` to `false`. See below for
 custom configuration details.
 
+## Markdown
+The HTML `<span>` tag can be used within Markdown. To explicitly add a screenshot to a Markdown specification, add the above attribute to a `<span>` tag within the Markdown specification, for example:
+
+```html
+<span ext:screenshot="linked">text</span>
+```
+
+You will also need to apply the following annotation to the corresponding fixture class:
+
+```java
+@ConcordionOptions(declareNamespaces={"ext", "urn:concordion-extensions:2010"})
+```
+
+See the [screenshot demo project](https://github.com/concordion/concordion-screenshot-extension-demo) for an example.
+
 # Installation
 The extension is available from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.concordion%22%20AND%20a%3A%22concordion-screenshot-extension%22).</a>
 
