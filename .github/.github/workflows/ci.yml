@@ -62,4 +62,4 @@ jobs:
           external_repository: concordion/concordion-specifications
           publish_branch: main
           publish_dir: artifacts/reports-java-8/reports/spec
-          destination_dir: ${name}
+          destination_dir: reponame
